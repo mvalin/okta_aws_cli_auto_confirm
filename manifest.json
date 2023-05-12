@@ -1,0 +1,40 @@
+{
+    "name": "Okta Auto confirm",
+    "version": "1.0.0",
+    "description": "This plugin will automatically confirm the web page loaded when you call okta aws cli authentication from shell. This is only for personal use. But if it is useful for you, please use it.",
+    "manifest_version": 3,
+    "icons": {
+        "16": "sysdig_16.png",
+        "32": "sysdig_32.png",
+        "48": "sysdig_48.png",
+        "128": "sysdig_128.png"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "sysdig_16.png",
+            "32": "sysdig_32.png",
+            "48": "sysdig_48.png",
+            "128": "sysdig_128.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_idle",
+            "matches": [
+                "https://*.okta.com/activate?user_code=*"
+            ],
+            "js": [
+                "activate.js"
+            ]
+        }
+    ]
+}
