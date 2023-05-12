@@ -1,5 +1,5 @@
 setTimeout(function () {
-    if (window.location.href.indexOf("sysdig.okta.com") !== -1) {
+    if (window.location.href.indexOf("icon.okta.com") !== -1) {
         const button = document.querySelector('input[type="submit"]')
         if (button) {
             button.click();
