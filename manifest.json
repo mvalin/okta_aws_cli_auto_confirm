@@ -1,7 +1,7 @@
 {
-    "name": "Okta Auto confirm",
+    "name": "Okta AWS Cli Auto confirm",
     "version": "1.0.0",
-    "description": "This plugin will automatically confirm the web page loaded when you call okta aws cli authentication from shell. This is only for personal use. But if it is useful for you, please use it.",
+    "description": "This plugin will automatically confirm the web page loaded when you call okta aws cli authentication from shell. This is only for personal use. But if it is useful for you, please use it. <br><a href='https://github.com/mvalin/okta_aws_cli_auto_confirm'>Github</a>",
     "manifest_version": 3,
     "icons": {
         "16": "icon_16.png",
@@ -9,11 +9,7 @@
         "48": "icon_48.png",
         "128": "icon_128.png"
     },
-    "permissions": [
-        "storage",
-        "activeTab",
-        "tabs"
-    ],
+    "permissions": [],
     "background": {
         "service_worker": "background.js"
     },
