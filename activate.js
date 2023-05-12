@@ -1,5 +1,5 @@
 setTimeout(function () {
-    if (window.location.href.indexOf("icon.okta.com") !== -1) {
+    if (/https:\/\/.*\.okta\.com\/activate/.test(window.location.href)) {
         const button = document.querySelector('input[type="submit"]')
         if (button) {
             button.click();
