@@ -3,15 +3,13 @@ setInterval(function () {
         const button = document.querySelector('input[type="submit"]')
         const label = document.querySelector(".okta-form-title")
         if (button) {
-            if (button.value == 'Next') {
-                console.log("Button clicked")
+            if ((button.value == 'Next') && (label.innerText == "Activate your device")) {
                 button.click();
             }
         }
         if (label) {
             if (label.innerText == "Device activated") {
                 setTimeout(function () {
-                    console.log("Label found")
                     chrome.runtime.sendMessage({}, function () { })
                 }, 1000)
             }
