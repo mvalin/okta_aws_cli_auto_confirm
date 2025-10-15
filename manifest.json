@@ -26,7 +26,8 @@
         {
             "run_at": "document_idle",
             "matches": [
-                "https://*.okta.com/activate?user_code=*"
+                "https://*.okta.com/activate?user_code=*",
+                "https://*.awsapps.com/start/*"
             ],
             "js": [
                 "activate.js"
