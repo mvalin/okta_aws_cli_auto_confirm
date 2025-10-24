@@ -18,7 +18,7 @@ setInterval(function () {
     if (/https:\/\/.*\.awsapps\.com\/start\/.*/.test(window.location.href)) {
         const buttonAllow = document.querySelector('button[data-testid="allow-access-button"]')
         const buttonConfirm = document.querySelector('button[id="cli_verification_btn"]')
-        const message = document.querySelector('div[id="alert-:ri:"]')
+        const message = document.querySelector('div[class="awsui-context-alert"]')
         if (buttonConfirm) {
             if (buttonConfirm.innerText == "Confirm and continue") {
                 buttonConfirm.click();
